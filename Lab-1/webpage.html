@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bright Future Institute</title>
+    <link rel="stylesheet" href="wp.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Bright Future Institute</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div id="user-auth">
+                <button id="login-btn" onclick="showLoginModal()">Login</button>
+                <button id="logout-btn" onclick="logoutUser()" style="display:none;">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Welcome to Bright Future Institute</h2>
+            <p>Unlock your potential with our expert-led courses.</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>At Bright Future Institute, we are dedicated to empowering students with the knowledge and skills needed to excel in their careers. Our courses are designed to be both challenging and rewarding.</p>
+        </div>
+    </section>
+
+    <section id="courses">
+        <div class="container">
+            <h2>Courses Offered</h2>
+            <div class="course">
+                <h3>Artificial Intelligence</h3>
+                <p>Delve into the world of AI and learn how to create intelligent systems.</p>
+                <button onclick="enrollCourse('Artificial Intelligence')">Enroll</button>
+            </div>
+            <div class="course">
+                <h3>Web Development</h3>
+                <p>Build stunning websites from scratch with our comprehensive web development course.</p>
+                <button onclick="enrollCourse('Web Development')">Enroll</button>
+            </div>
+            <div class="course">
+                <h3>Data Science</h3>
+                <p>Master the tools and techniques used by data scientists to analyze and visualize data.</p>
+                <button onclick="enrollCourse('Data Science')">Enroll</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Bright Future Institute. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="hideLoginModal()">&times;</span>
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="wp.js"></script>
+</body>
+</html>
